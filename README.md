@@ -8,5 +8,22 @@ Written back in 2002
 
 
 
- [![views](https://raw.githubusercontent.com/comarius/backuptime/master/Doc/errfoldaccess.jpg)](https://raw.githubusercontent.com/comarius/backuptime/master/Doc/errfoldaccess.jpg)
+ [![views](https://raw.githubusercontent.com/comarius/backuptime/master/Doc/ftptab.jpg)](https://raw.githubusercontent.com/comarius/backuptime/master/Doc/ftptab.jpg)
  
+ 
+ [![views](https://raw.githubusercontent.com/comarius/backuptime/master/Doc/init.jpg)](https://raw.githubusercontent.com/comarius/backuptime/master/Doc/init.jpg)
+ 
+ 
+ [![views](https://raw.githubusercontent.com/comarius/backuptime/master/Doc/okftp.jpg)](hhttps://raw.githubusercontent.com/comarius/backuptime/master/Doc/okftp.jpg)
+ 
+ 
+ 
+ [![views](https://raw.githubusercontent.com/comarius/backuptime/master/Doc/selfolder.jpg)](https://raw.githubusercontent.com/comarius/backuptime/master/Doc/selfolder.jpg)
+ 
+ 
+ 
+ 
+ [![views](https://raw.githubusercontent.com/comarius/backuptime/master/Doc/sett.jpg)](https://raw.githubusercontent.com/comarius/backuptime/master/Doc/sett.jpg)
+ 
+
+ [![views](https://raw.githubusercontent.com/comarius/backuptime/master/Doc/systray.jpg)]( https://raw.githubusercontent.com/comarius/backuptime/master/Doc/systray.jpg)

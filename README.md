@@ -5,7 +5,7 @@ A Windows service which backups local folders (selected) on regulat times (confi
 to a remote ftp server (no sftp)
 
 Written back in 2002
-
+Not maintained any longer
 
 
  [![views](https://raw.githubusercontent.com/comarius/backuptime/master/Doc/ftptab.jpg)](https://raw.githubusercontent.com/comarius/backuptime/master/Doc/ftptab.jpg)

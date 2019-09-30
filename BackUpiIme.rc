@@ -1,0 +1,507 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\BackUpiIme.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\BackUpiIme.ico"
+IDI_DISABLED            ICON                    "res\\icon1.ico"
+IDI_ENABLED             ICON                    "res\\icon3.ico"
+IDI_BACKUPING1          ICON                    "res\\enabled1.ico"
+IDI_BACKUPING2          ICON                    "res\\backupin.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG  0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About BackUpTime"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "BackUp Watch Beta",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright Zalsoft Inc (C) 2005",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_BACKUPIIME_DIALOG DIALOGEX 0, 0, 334, 218
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CAPTION
+EXSTYLE WS_EX_TOOLWINDOW | WS_EX_APPWINDOW
+CAPTION 
+"BackUpTime                                                                                                                  Zalsoft Inc"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Hide",IDCANCEL,279,189,51,14
+    PUSHBUTTON      "Save Chan&ges",PB_APPLY,216,189,60,14
+    CONTROL         "Tab1",TAB_CTRL,"SysTabControl32",0x0,5,5,326,182
+    CONTROL         "",ST_DLG,"Static",SS_BLACKFRAME | NOT WS_VISIBLE,8,20,317,162
+    LTEXT           "--- --- --- ---",EF_FNAME,4,205,328,13,0,WS_EX_STATICEDGE
+END
+
+DLG_PICKFOLDERS DIALOG  0, 0, 311, 166
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Backup &Folders",IDC_STATIC,6,4,303,140
+    CONTROL         "List1",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,10,15,290,125
+    PUSHBUTTON      "&Add Folder...",PB_ADDFOLDER,10,147,50,14
+    PUSHBUTTON      "&Delete Folder",PB_DELETE_FOLDER,250,147,50,14,WS_DISABLED
+    PUSHBUTTON      "&Edit Folder...",PB_EDITFOLDER,65,147,50,14
+END
+
+DLG_SELECTFOLDER DIALOGEX 0, 0, 247, 215
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Select New Folder"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,135,198,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,190,198,50,14
+    CONTROL         "Tree1",IDC_TREE1,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | WS_TABSTOP,5,5,237,175,WS_EX_STATICEDGE
+    LTEXT           "",IDC_STATIC_NOTE,2,200,130,11,0,WS_EX_STATICEDGE
+    EDITTEXT        EF_FTYPES,42,183,198,12,ES_AUTOHSCROLL | NOT WS_BORDER,WS_EX_STATICEDGE
+    LTEXT           "&File Types:",IDC_STATIC,2,185,35,8
+END
+
+DLG_BACKUPDETINATION DIALOGEX 0, 0, 311, 166
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Backup Location",IDC_STATIC,4,0,303,164
+    GROUPBOX        "",IDC_STATIC,7,13,289,56,WS_GROUP
+    GROUPBOX        "",IDC_STATIC,8,72,288,73,WS_GROUP
+    CONTROL         "&Nettwork Drive or Mapped Location",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | WS_GROUP,25,13,129,10
+    CONTROL         "FTP &Server",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,27,72,52,10
+    EDITTEXT        EF_DETFOLDER,23,30,240,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER,WS_EX_STATICEDGE
+    PUSHBUTTON      "&...",PB_NETEXPLORE,263,30,20,14,WS_DISABLED
+    PUSHBUTTON      "&FTP Settings...",PB_FTP_SETTINGS,232,124,58,15,WS_DISABLED
+    CONTROL         "Copy Log File on a Remote Location",CK_REPORT,"Button",BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_TABSTOP,7,152,8,10
+    CONTROL         "&Allways Overwrite Destination Files",CK_OVERWRITE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,8,152,122,10
+    LTEXT           "",ST_USER,45,85,80,12,WS_DISABLED,WS_EX_STATICEDGE
+    LTEXT           "",ST_PASSWORD,165,85,80,12,WS_DISABLED,WS_EX_STATICEDGE
+    LTEXT           "",ST_SERVER,45,105,80,12,WS_DISABLED,WS_EX_STATICEDGE
+    LTEXT           "",ST_PORT,165,105,30,12,WS_DISABLED,WS_EX_STATICEDGE
+    LTEXT           "",ST_LOCATION,45,125,180,12,WS_DISABLED,WS_EX_STATICEDGE
+    LTEXT           "&User",ST1,18,88,16,8,WS_DISABLED
+    LTEXT           "&Password",ST2,131,86,32,8,WS_DISABLED
+    LTEXT           "Ser&ver",ST3,16,106,22,8,WS_DISABLED
+    LTEXT           "P&ort",ST4,133,106,14,8,WS_DISABLED
+    LTEXT           "&Location",ST5,14,126,28,8,WS_DISABLED
+    CONTROL         "&Create Full Tree Structure Including Drive",CK_CREATETREE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,145,152,146,10
+    PUSHBUTTON      "&Remote Settings...",PB_FTP_SETTINGS2,230,50,58,15,WS_DISABLED
+END
+
+IDD_DIALOG1 DIALOGEX 0, 0, 402, 242
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "FTP Server Settings"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,290,225,50,14,WS_DISABLED
+    PUSHBUTTON      "Cancel",IDCANCEL,346,225,50,14
+    LTEXT           "&Host Address:",IDC_STATIC,7,10,45,8
+    EDITTEXT        EF_HOST,57,6,123,12,ES_AUTOHSCROLL | NOT WS_BORDER,WS_EX_STATICEDGE
+    LTEXT           "&Port",IDC_STATIC,7,27,14,8
+    EDITTEXT        EF_PORT,57,23,35,12,ES_AUTOHSCROLL | NOT WS_BORDER,WS_EX_STATICEDGE
+    LTEXT           "&Login:",IDC_STATIC,190,9,20,8
+    EDITTEXT        EF_LOGIN,220,5,92,12,ES_AUTOHSCROLL | NOT WS_BORDER,WS_EX_STATICEDGE
+    LTEXT           "Pas&sword",IDC_STATIC,315,9,32,8
+    EDITTEXT        EF_PASSWORD,355,5,29,12,ES_PASSWORD | ES_AUTOHSCROLL | NOT WS_BORDER,WS_EX_STATICEDGE
+    LTEXT           "Initial &Path:",IDC_STATIC,120,27,36,8
+    EDITTEXT        EF_INITIALPATH,162,23,170,12,ES_AUTOHSCROLL | NOT WS_BORDER,WS_EX_STATICEDGE
+    CONTROL         "Tree1",IDC_TREE1,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | TVS_SHOWSELALWAYS | TVS_FULLROWSELECT | WS_TABSTOP,5,51,185,110,WS_EX_STATICEDGE
+    PUSHBUTTON      "Test Connection",PB_CONNECT,203,225,59,14
+    EDITTEXT        EF_OUT,5,174,185,46,ES_MULTILINE | ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER | WS_VSCROLL,WS_EX_STATICEDGE
+    CONTROL         "Passive &Mode",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,340,25,61,10
+    LTEXT           "",ST_OUT,5,224,189,11,0,WS_EX_STATICEDGE
+    CONTROL         "List1",LS_FILES,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_NOSORTHEADER | WS_TABSTOP,195,51,200,170,WS_EX_STATICEDGE
+    CONTROL         "Enable Write Access Test On Directory Change",CK_TIMECHECK,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,163,166,10
+    LTEXT           "File View",IDC_STATIC,194,41,60,8
+    LTEXT           "Directory Interactive View",IDC_STATIC,5,40,120,8
+END
+
+DLG_SCHEDULE DIALOGEX 0, 0, 311, 166
+STYLE DS_LOCALEDIT | DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Backup Scheduling",IDC_STATIC,4,0,303,164
+    LTEXT           "Select &Month of Year",IDC_STATIC,19,18,68,8
+    COMBOBOX        CB_MONTH,99,15,96,89,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Select &Day of Week",IDC_STATIC,19,39,65,8
+    COMBOBOX        CB_DAY,99,36,96,89,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Select &Time Of Day",IDC_STATIC,19,58,62,8
+    COMBOBOX        CB_TIME,99,56,96,106,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Show Errors Imediate",CK_SHOWERRORMSGBOX,"Button",BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_TABSTOP,20,76,8,10
+    CONTROL         "Work In Background",CK_WORKINBACKGROUND,"Button",BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_TABSTOP,20,118,8,10
+    CONTROL         "Show Task Bar Icon",CK_TASKBAR,"Button",BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_TABSTOP,20,118,8,10
+    CONTROL         "&Log Errors",CK_LOGERRORS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,76,48,10
+    PUSHBUTTON      "&Test Backup Now...",PB_BACKUPNOW,215,55,75,14
+    CONTROL         "C&hange Local File Time to Server Backuped File Time",CK_CHANGEFT,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,85,76,185,10
+    EDITTEXT        IDC_EDIT1,9,115,293,44,ES_MULTILINE | ES_AUTOVSCROLL | ES_READONLY | NOT WS_BORDER | WS_VSCROLL,WS_EX_STATICEDGE
+    CONTROL         "Backup Right Away When Something Changes",CK_HOOKCHANGE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,20,100,165,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "By Marius Chincisan"
+            VALUE "CompanyName", "Zalsoft Inc"
+            VALUE "FileDescription", "BackUpWatch MFC Application"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "BackUpiIme"
+            VALUE "LegalCopyright", "Copyright Zalsoft Inc (C) 2005"
+            VALUE "OriginalFilename", "BackWatch.EXE"
+            VALUE "ProductName", "BackUWatch Application"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_BACKUPIIME_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 327
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 211
+    END
+
+    DLG_PICKFOLDERS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 304
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 159
+    END
+
+    DLG_SELECTFOLDER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 240
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 208
+    END
+
+    DLG_BACKUPDETINATION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 304
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 159
+    END
+
+    IDD_DIALOG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 395
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 235
+    END
+
+    DLG_SCHEDULE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 304
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 159
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+DLG_SCHEDULE DLGINIT
+BEGIN
+    CB_MONTH, 0x403, 12, 0
+0x7645, 0x7265, 0x2079, 0x6f4d, 0x746e, 0x0068, 
+    CB_MONTH, 0x403, 8, 0
+0x614a, 0x756e, 0x7261, 0x0079, 
+    CB_MONTH, 0x403, 9, 0
+0x6546, 0x7262, 0x6175, 0x7972, "\000" 
+    CB_MONTH, 0x403, 6, 0
+0x614d, 0x6372, 0x0068, 
+    CB_MONTH, 0x403, 6, 0
+0x7041, 0x6972, 0x006c, 
+    CB_MONTH, 0x403, 4, 0
+0x614d, 0x0079, 
+    CB_MONTH, 0x403, 5, 0
+0x754a, 0x656e, "\000" 
+    CB_MONTH, 0x403, 5, 0
+0x754a, 0x796c, "\000" 
+    CB_MONTH, 0x403, 7, 0
+0x7541, 0x7567, 0x7473, "\000" 
+    CB_MONTH, 0x403, 10, 0
+0x6553, 0x7470, 0x6d65, 0x6562, 0x0072, 
+    CB_MONTH, 0x403, 9, 0
+0x634f, 0x6f74, 0x626d, 0x7265, "\000" 
+    CB_MONTH, 0x403, 10, 0
+0x6f4e, 0x6576, 0x6e6d, 0x7265, 0x0020, 
+    CB_MONTH, 0x403, 9, 0
+0x6544, 0x6563, 0x626d, 0x7265, "\000" 
+    CB_DAY, 0x403, 10, 0
+0x7645, 0x7265, 0x2079, 0x6144, 0x0079, 
+    CB_DAY, 0x403, 13, 0
+0x7645, 0x7265, 0x2079, 0x6f4d, 0x646e, 0x7961, "\000" 
+    CB_DAY, 0x403, 15, 0
+0x7645, 0x7265, 0x2079, 0x7554, 0x7365, 0x6474, 0x7961, "\000" 
+    CB_DAY, 0x403, 14, 0
+0x7645, 0x7265, 0x2079, 0x6557, 0x736e, 0x6164, 0x0079, 
+    CB_DAY, 0x403, 16, 0
+0x7645, 0x7265, 0x2079, 0x6854, 0x7572, 0x7473, 0x6164, 0x0079, 
+    CB_DAY, 0x403, 13, 0
+0x7645, 0x7265, 0x2079, 0x7246, 0x6469, 0x7961, "\000" 
+    CB_DAY, 0x403, 15, 0
+0x7645, 0x7265, 0x2079, 0x6153, 0x7574, 0x6472, 0x7961, "\000" 
+    CB_DAY, 0x403, 13, 0
+0x7645, 0x7265, 0x2079, 0x7553, 0x646e, 0x7961, "\000" 
+    CB_TIME, 0x403, 18, 0
+0x7645, 0x7265, 0x2079, 0x6f48, 0x7275, 0x313a, 0x2030, 0x696d, 0x006e, 
+
+    CB_TIME, 0x403, 9, 0
+0x3030, 0x313a, 0x2035, 0x6d61, "\000" 
+    CB_TIME, 0x403, 9, 0
+0x3130, 0x313a, 0x2035, 0x6d61, "\000" 
+    CB_TIME, 0x403, 9, 0
+0x3230, 0x313a, 0x2035, 0x6d61, "\000" 
+    CB_TIME, 0x403, 9, 0
+0x3330, 0x313a, 0x2035, 0x6d61, "\000" 
+    CB_TIME, 0x403, 9, 0
+0x3430, 0x313a, 0x2035, 0x6d61, "\000" 
+    CB_TIME, 0x403, 9, 0
+0x3530, 0x313a, 0x2035, 0x6d61, "\000" 
+    CB_TIME, 0x403, 9, 0
+0x3630, 0x313a, 0x2035, 0x6d61, "\000" 
+    CB_TIME, 0x403, 9, 0
+0x3730, 0x313a, 0x2035, 0x6d61, "\000" 
+    CB_TIME, 0x403, 9, 0
+0x3830, 0x313a, 0x2035, 0x6d61, "\000" 
+    CB_TIME, 0x403, 9, 0
+0x3930, 0x313a, 0x2035, 0x6d61, "\000" 
+    CB_TIME, 0x403, 10, 0
+0x3130, 0x3a30, 0x3031, 0x6120, 0x006d, 
+    CB_TIME, 0x403, 10, 0
+0x3130, 0x3a31, 0x3531, 0x6120, 0x006d, 
+    CB_TIME, 0x403, 10, 0
+0x3130, 0x3a32, 0x3531, 0x6120, 0x006d, 
+    CB_TIME, 0x403, 7, 0
+0x3130, 0x313a, 0x6d35, "\000" 
+    CB_TIME, 0x403, 9, 0
+0x3230, 0x313a, 0x2035, 0x6d70, "\000" 
+    CB_TIME, 0x403, 9, 0
+0x3330, 0x313a, 0x2035, 0x6d70, "\000" 
+    CB_TIME, 0x403, 9, 0
+0x3430, 0x313a, 0x2035, 0x6d70, "\000" 
+    CB_TIME, 0x403, 9, 0
+0x3530, 0x313a, 0x2035, 0x6d70, "\000" 
+    CB_TIME, 0x403, 9, 0
+0x3630, 0x313a, 0x2035, 0x6d70, "\000" 
+    CB_TIME, 0x403, 9, 0
+0x3730, 0x313a, 0x2035, 0x6d70, "\000" 
+    CB_TIME, 0x403, 9, 0
+0x3830, 0x313a, 0x2035, 0x6d70, "\000" 
+    CB_TIME, 0x403, 9, 0
+0x3930, 0x313a, 0x2035, 0x6d70, "\000" 
+    CB_TIME, 0x403, 10, 0
+0x3130, 0x3a30, 0x3531, 0x7020, 0x006d, 
+    CB_TIME, 0x403, 10, 0
+0x3130, 0x3a31, 0x3531, 0x7020, 0x006d, 
+    CB_TIME, 0x403, 1, 0
+"\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDI_TRAYICON MENU 
+BEGIN
+    POPUP "d"
+    BEGIN
+        MENUITEM "Configure...",                MN_SETTINGS
+        MENUITEM "Enable",                      MN_ENABLE
+        MENUITEM "Disable",                     MN_DISABLE
+        MENUITEM "Stop",                        MN_STOP
+        MENUITEM "Exit",                        MN_EXIT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About BackUpTime..."
+END
+
+STRINGTABLE 
+BEGIN
+    IDI_DISABLED            "Backup Watch Disabled"
+    IDI_ENABLED             "Backup Watch Enabled"
+    IDI_BACKUPING1          "Backup In Progress"
+    IDI_BACKUPING2          "Backup In Progress"
+    IDI_TRAYICON            "Backup Watch"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (New Zealand) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENZ)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_NZ
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_FILE_TYPES          BITMAP                  "res\\filetypes.bmp"
+#endif    // English (New Zealand) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\BackUpiIme.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
